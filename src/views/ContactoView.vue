@@ -75,7 +75,7 @@ methods:{
     </button>
    </form>
 
-   <!-- <p>{{contacto}}</p> -->
+   
   
 
 </template>

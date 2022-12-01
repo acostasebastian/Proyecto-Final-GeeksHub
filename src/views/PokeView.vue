@@ -21,11 +21,17 @@ getData(`https://pokeapi.co/api/v2/pokemon/${route.params.name}`);
 
 
 <template>
+
+<div id="container">
     <p v-if="loading">Cargando información...</p>
-    <div class="alert alert-danger mt-2" v-if="error">No existe el pokemon</div>
+    
     <div v-if="data">
         <img :src="data.sprites?.front_default" alt="">
         <h1>Poke name: {{$route.params.name}}</h1>  <!--recibo el parametro name enviado desde el index-->
     </div>
+    <div class="alert alert-danger mt-2" v-if="error">No existe el pokemon</div>
     <button @click="back" class="btn btn-outline-primary">Volver</button>
+
+</div>
+
 </template>
