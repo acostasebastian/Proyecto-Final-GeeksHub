@@ -5,6 +5,8 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
 
+<div id="container">
+
 <nav class="navbar bg-dark navbar-dark">
   <div class="container">
     <RouterLink class="navbar-brand" to="/">
@@ -34,7 +36,7 @@ import { RouterLink, RouterView } from 'vue-router'
     </div>
 </div>
 </footer>
-
+</div>
 </template>
 
 <style scoped>

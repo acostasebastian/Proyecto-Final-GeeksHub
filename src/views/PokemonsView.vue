@@ -1,17 +1,20 @@
-<script setup>
+<script setup >
 
 import { RouterLink } from 'vue-router';
 import {useGetData} from '@/composables/getData'
 
 
-const {data, getData, loading,error} = useGetData()
+
+const {data, getData, loading,error} = useGetData();
+
 
 getData("https://pokeapi.co/api/v2/pokemon");
+
 
 </script>
 
 <template>
-        <h1>Pokemones</h1>
+        <h1>Pokemones</h1>                
     <div id="container">
         
         <p v-if="loading">Cargando información...</p>
@@ -30,6 +33,7 @@ getData("https://pokeapi.co/api/v2/pokemon");
         </div>
         <div class="alert alert-danger mt-2" v-if="error">{{ error }}</div>
     </div>
+
       
    
 </template>
